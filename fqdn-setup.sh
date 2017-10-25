@@ -15,25 +15,30 @@
 # OS and acts on it.  If it isn't in the list, the code is not complete and
 # will not work as intended. If the OS isn't listed. Don't even bother trying it.
 
+# Parameters
+SUPPORTED_SYSTEMS = CentOS 7 / RHEL 7
+
 # Welcoming statement
 clear
 echo "Welcome to the FQDN fast setup application"
 echo
-echo "Please note that this application only works on Centos 7 / RHEL 7."
+echo "Please note that this application only works on $SUPPORTED_SYSTEMS"
 echo
 echo "QatifServ will not be responsible for any errors or mistake that might happen as a result of running the application."
 echo
 
 # Asking the user for his hostname
+echo "Please enter your hostname:"
+read HOSTNAME
 
 # Changing the settings to hostname across the system
+hostname $HOSTNAME
 
 # Output the results
 
 # Closing statement
 echo "[ Done ] Your hostname:"
 hostname
-echo
 echo
 echo
 echo "Thank you for using this application. Have a wonderful day."
